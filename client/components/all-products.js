@@ -11,6 +11,7 @@ class AllProducts extends React.Component {
   }
   componentDidMount() {
     this.props.getProducts()
+    localStorage.setItem('cart', [])
   }
   addToCart(event) {
     if (!this.props.user.id) {
