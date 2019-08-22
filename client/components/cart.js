@@ -36,9 +36,11 @@ class Cart extends React.Component {
     if (this.props.user.id) {
       this.props.getCart()
     } else {
-      let cart = JSON.parse(localStorage.getItem('cart'))
-      if (cart === null) {
+      let cart
+      if (!localStorage.getItem('cart')) {
         cart = []
+      } else {
+        cart = JSON.parse(localStorage.getItem('cart'))
       }
       this.props.guestAdd(cart)
     }
@@ -52,7 +54,6 @@ class Cart extends React.Component {
 
   render() {
     return (
-
       <div>
         <h1>Products in Cart:</h1>
         {this.props.cart.map(product => {
