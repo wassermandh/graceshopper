@@ -16,10 +16,11 @@ Basic CSS and Semantic-UI<br />
 Storing/accessing data:<br />
 Postgres<br />
 Sequelize<br />
+Local Storage<br />
 
 Front-end:<br />
 React<br />
-Redux<br />
+React-Redux<br />
 
 ## Running our app
 
