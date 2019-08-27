@@ -1,4 +1,4 @@
-# KnowNYC:
+# Your World Industries:
 
 http://yourworldindustries.herokuapp.com/products
 
