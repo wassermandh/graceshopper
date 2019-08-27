@@ -6,7 +6,7 @@ Your world industries is a gag e-commerce site that sells users planets.
 
 ## Navigating the site:
 
-The site's home page displays all 3 available planets. Users (guests or logged-in) can click on each planet to render a single-product view, where they can add a certain quantity of the item to their cart. A user can then click on "see cart" in the nav-bar to see the number of each item in their cart. A user can check out by clicking "to checkout" beneath the "change quantity" button. If the user is not logged in, they will be asked to do so or to sign up with a username/password or OAuth. If the user is logged in, there will be  an option to "pay with card", but this is not functional. They can also click "submit order", after which they will be thanked for their purchase. They can then click the "orders" tab toward the top of the screen to see their submitted order(s). 
+The site's home page displays all 3 available planets. Users (guests or logged-in) can click on each planet to render a single-product view, where they can add a certain quantity of the item to their cart. A user can then click on "see cart" in the nav-bar to see the number of each item in their cart. A user can check out by clicking the "to checkout" button beneath the "change quantity" button. If the user is not logged in, they will be asked to do so or to sign up with a username/password or OAuth. If the user is logged in, there will be  an option to "pay with card", but this is not functional. They can also click "submit order", after which they will be thanked for their purchase. They can then click the "orders" tab toward the top of the screen to see their submitted order(s). 
 
 ## Technologies:
 
