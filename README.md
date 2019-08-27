@@ -10,16 +10,16 @@ The site's home page displays all 3 available planets. Users can click on each p
 
 ## Technologies:
 
-Styling:
-Basic CSS and Semantic-UI
+Styling:<br />
+Basic CSS and Semantic-UI<br />
 
-Storing/accessing data:
-Postgres
-Sequelize
+Storing/accessing data:<br />
+Postgres<br />
+Sequelize<br />
 
-Front-end:
-React
-Redux
+Front-end:<br />
+React<br />
+Redux<br />
 
 ## Running our app
 
