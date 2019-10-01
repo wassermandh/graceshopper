@@ -1,9 +1,17 @@
 body {
   font-family: sans-serif;
+  padding: 10px;
 }
 
 a {
   text-decoration: none;
+}
+
+.checkoutLink {
+  width: 50%;
+}
+a:hover {
+  font-style: italic;
 }
 
 label {
@@ -17,11 +25,27 @@ nav a {
 
 form div {
   margin: 1em;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .padded {
   display: flex;
   margin: 20px;
   padding: 20px;
+}
+
+#prodsInCart {
+  display: flex;
+  align-items: flex-end;
+}
+
+.singleProd {
+  padding: 10px;
+}
+
+#checkoutButton {
+  font-size: 50px;
+  padding: 15px;
+  display: flex;
+  margin-top: 10px;
 }

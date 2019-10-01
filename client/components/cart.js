@@ -57,43 +57,58 @@ class Cart extends React.Component {
     return (
       <div>
         <h1>Products in Cart:</h1>
-        {this.props.cart.map(product => {
-          console.log('quantity', product.quantity)
-          console.log('cartquantity', product.cartQuantity)
-          let ref = `productQuantity${product.id}`
-          let options = []
-          let selectQuantity =
-            product.quantity > 10 ? 10 : product.quantity + product.cartQuantity
-          for (let i = 0; i <= selectQuantity; i++) {
-            options.push(
-              <option key={i} value={i}>
-                {i}
-              </option>
+        <div id="prodsInCart">
+          {this.props.cart.map(product => {
+            console.log('quantity', product.quantity)
+            console.log('cartquantity', product.cartQuantity)
+            let ref = `productQuantity${product.id}`
+            let options = []
+            let selectQuantity =
+              product.quantity > 10
+                ? 10
+                : product.quantity + product.cartQuantity
+            for (let i = 0; i <= selectQuantity; i++) {
+              options.push(
+                <option key={i} value={i}>
+                  {i}
+                </option>
+              )
+            }
+            return (
+              <div className="singleProd" key={product.id}>
+                <h3>{product.name}</h3>
+                <img src={product.imageUrl} />
+                <div>
+                  <h3>Quantity: {product.cartQuantity} </h3>
+                  <select ref={ref}>{options}</select>
+                  <button
+                    type="button"
+                    onClick={
+                      this.props.user.id
+                        ? () =>
+                            this.changeQuantityUser(
+                              product,
+                              +this.refs[ref].value
+                            )
+                        : () =>
+                            this.changeQuantityGuest(
+                              product,
+                              +this.refs[ref].value
+                            )
+                    }
+                  >
+                    Change Quantity
+                  </button>
+                </div>
+              </div>
             )
-          }
-          return (
-            <div key={product.id}>
-              <h3>{product.name}</h3>
-              <img src={product.imageUrl} />
-              <h3>Quantity: {product.cartQuantity} </h3>
-              <select ref={ref}>{options}</select>
-              <button
-                type="button"
-                onClick={
-                  this.props.user.id
-                    ? () =>
-                        this.changeQuantityUser(product, +this.refs[ref].value)
-                    : () =>
-                        this.changeQuantityGuest(product, +this.refs[ref].value)
-                }
-              >
-                Change Quantity
-              </button>
-            </div>
-          )
-        })}
-
-        <NavLink to="/checkout">To Checkout</NavLink>
+          })}
+        </div>
+        <div id="checkoutButton">
+          <NavLink className="checkoutLink" to="/checkout">
+            To Checkout
+          </NavLink>
+        </div>
       </div>
     )
   }
