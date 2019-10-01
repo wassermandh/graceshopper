@@ -40,6 +40,7 @@ class Cart extends React.Component {
       if (!localStorage.getItem('cart')) {
         cart = []
       } else {
+        console.log(cart)
         cart = JSON.parse(localStorage.getItem('cart'))
       }
       this.props.guestAdd(cart)

@@ -19,6 +19,7 @@ export const getCart = () => {
   return async dispatch => {
     try {
       const {data} = await axios.get('/api/cart')
+      console.log(data)
       dispatch(gotCart(data))
     } catch (err) {
       console.error(err)
@@ -69,6 +70,7 @@ export default function(state = defaultCart, action) {
       return action.cart
     case ADD_ITEM:
       let added = false
+      console.log(action.quantity)
       state.forEach((item, idx) => {
         if (item.id === action.item.id) {
           action.item.quantity = action.item.quantity - action.quantity
